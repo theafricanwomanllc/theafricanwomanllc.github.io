@@ -28,7 +28,7 @@ body {
   font-family: 'Manrope', sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 img {
@@ -75,7 +75,7 @@ a {
 
 .nav-links {
   display: flex;
-  gap: 24px;
+  gap: 28px;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -117,25 +117,27 @@ a {
     url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1800&q=80")
     center/cover no-repeat;
   color: white;
-  padding: 130px 0 105px;
+  padding: 140px 0 120px;
 }
 
 .hero h1 {
   font-size: clamp(3rem, 6vw, 5.4rem);
   line-height: 1;
-  margin: 0 0 18px;
+  margin: 0 0 20px;
 }
 
 .hero p {
   max-width: 760px;
   color: rgba(255,255,255,0.9);
+  margin-bottom: 20px;
 }
 
+/* BADGES */
 .badge-row {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin: 24px 0;
+  margin: 28px 0;
 }
 
 .badge {
@@ -147,10 +149,11 @@ a {
   color: #f6e6c6;
 }
 
+/* BUTTONS */
 .button-row {
   display: flex;
-  gap: 14px;
-  margin-top: 26px;
+  gap: 16px;
+  margin-top: 30px;
 }
 
 .btn {
@@ -176,7 +179,12 @@ a {
 
 /* SECTIONS */
 .section {
-  padding: 72px 0;
+  padding: 100px 0;
+}
+
+/* spacing between elements inside sections */
+.section > .container > * + * {
+  margin-top: 32px;
 }
 
 .section-dark {
@@ -201,24 +209,26 @@ h1, h2, h3 {
 
 h2 {
   font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 20px;
 }
 
 .lead {
   max-width: 760px;
   color: var(--muted);
+  margin-bottom: 30px;
 }
 
 /* GRID */
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 28px;
+  gap: 40px;
 }
 
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 30px;
 }
 
 /* CARDS */
@@ -228,6 +238,13 @@ h2 {
   border-radius: 22px;
   padding: 30px;
   box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
 }
 
 .card p {
@@ -239,7 +256,7 @@ h2 {
   background: linear-gradient(135deg, #1a1411, #2a1f19);
   color: white;
   border-radius: 28px;
-  padding: 40px;
+  padding: 50px;
   text-align: center;
 }
 
@@ -247,7 +264,7 @@ h2 {
   color: rgba(255,255,255,0.8);
 }
 
-/* FORMS */
+/* FORM */
 input, textarea {
   width: 100%;
   padding: 15px;
@@ -262,7 +279,7 @@ textarea {
 /* FOOTER */
 .site-footer {
   text-align: center;
-  padding: 30px;
+  padding: 40px;
   color: var(--muted);
 }
 
@@ -279,6 +296,17 @@ textarea {
   }
 
   .hero {
-    padding: 90px 0;
+    padding: 100px 0;
   }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
 }
