@@ -132,6 +132,11 @@ a {
   margin-bottom: 20px;
 }
 
+/* FIXED spacing below hero */
+.hero + .section {
+  margin-top: 40px;
+}
+
 /* BADGES */
 .badge-row {
   display: flex;
@@ -182,7 +187,12 @@ a {
   padding: 100px 0;
 }
 
-/* spacing between elements inside sections */
+/* First section spacing fix */
+.section:first-of-type {
+  padding-top: 120px;
+}
+
+/* internal spacing */
 .section > .container > * + * {
   margin-top: 32px;
 }
@@ -251,6 +261,14 @@ h2 {
   color: var(--muted);
 }
 
+/* STAT STRIP FIX */
+.stat-strip {
+  background: #201814;
+  color: white;
+  padding: 30px 0;
+  margin-bottom: 40px;
+}
+
 /* CTA */
 .cta-band {
   background: linear-gradient(135deg, #1a1411, #2a1f19);
@@ -298,15 +316,4 @@ textarea {
   .hero {
     padding: 100px 0;
   }
-}
-
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.7s ease;
-}
-
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(0);
 }
