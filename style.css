@@ -867,3 +867,52 @@ body {
   background: #ffffff;
   border: 1px solid #e5dbcf;
 }
+
+/* INSIDE PAGE HERO UPGRADE */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(24,19,17,0.88), rgba(36,27,23,0.76)),
+    url("https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=1800&q=80")
+    center/cover no-repeat;
+  color: white;
+  padding: 90px 0 70px;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(185,138,47,0.18), transparent 28%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.06), transparent 24%);
+  pointer-events: none;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero .eyebrow {
+  color: #e1bf79;
+}
+
+.page-hero h1 {
+  color: white;
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  line-height: 0.98;
+  margin-bottom: 16px;
+  max-width: 12ch;
+}
+
+.page-hero .lead,
+.page-hero p {
+  color: rgba(255,255,255,0.84);
+  max-width: 760px;
+}
+
+.page-hero + .section {
+  margin-top: 0;
+}
