@@ -833,3 +833,37 @@ p {
     margin-top: 18px;
   }
 }
+
+/* === BACKGROUND VARIATIONS === */
+
+.section-alt {
+  background: #f1ebe3;
+}
+
+.section-dark {
+  background: #1a1411;
+  color: white;
+}
+
+.section-dark h2,
+.section-dark h3,
+.section-dark p {
+  color: white;
+}
+
+.section-gradient {
+  background: linear-gradient(135deg, #f6f2ec, #efe6da);
+}
+
+/* subtle luxury glow */
+body {
+  background: 
+    radial-gradient(circle at top left, rgba(185,138,47,0.05), transparent 40%),
+    var(--bg);
+}
+
+/* stronger card contrast */
+.card {
+  background: #ffffff;
+  border: 1px solid #e5dbcf;
+}
