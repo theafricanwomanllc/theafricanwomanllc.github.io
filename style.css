@@ -417,3 +417,112 @@ textarea {
     padding: 100px 0;
   }
 }
+
+/* =========================
+   GLOBAL SPACING FIX
+========================= */
+
+/* Add breathing room between sections */
+.section {
+  padding: 100px 0; /* increased from 72 */
+}
+
+/* Add space between stacked sections */
+.section + .section {
+  margin-top: 20px;
+}
+
+/* Fix space under hero */
+.hero + .stat-strip {
+  margin-top: -20px;
+}
+
+/* =========================
+   GRID + CARD SPACING FIX
+========================= */
+
+.grid-2 {
+  gap: 40px; /* was 28 */
+}
+
+.grid-3 {
+  gap: 30px; /* was 22 */
+}
+
+/* Add space between rows of cards */
+.card {
+  margin-bottom: 10px;
+}
+
+/* Add space between sections inside container */
+.container > * + * {
+  margin-top: 30px;
+}
+
+/* =========================
+   TEXT SPACING IMPROVEMENT
+========================= */
+
+h2 {
+  margin-bottom: 24px; /* more breathing */
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+/* =========================
+   CTA SECTION SPACING
+========================= */
+
+.cta-band {
+  margin-top: 60px;
+}
+
+/* =========================
+   ANIMATION (MODERN FEEL)
+========================= */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slight stagger effect */
+.fade-up:nth-child(2) { transition-delay: 0.1s; }
+.fade-up:nth-child(3) { transition-delay: 0.2s; }
+.fade-up:nth-child(4) { transition-delay: 0.3s; }
+
+/* =========================
+   HOVER POLISH (PREMIUM FEEL)
+========================= */
+
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   MOBILE FIXES
+========================= */
+
+@media (max-width: 900px) {
+  .section {
+    padding: 70px 0;
+  }
+
+  .grid-2,
+  .grid-3 {
+    gap: 24px;
+  }
+}
