@@ -13,6 +13,29 @@ body {
   color: #2f2a26;
 }
 
+/* NAVBAR */
+.nav {
+  background: #1f1814;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+.nav h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* HERO */
 .hero {
   background: linear-gradient(rgba(25,20,18,0.82), rgba(25,20,18,0.82)),
               url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1400&q=80');
@@ -24,48 +47,20 @@ body {
 }
 
 .hero h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
+  font-size: 38px;
 }
 
-.hero p {
-  max-width: 850px;
-  margin: 10px auto;
-  color: #e7e0d8;
-}
-
-.btn-row {
-  margin-top: 28px;
-}
-
-.btn, .btn-outline {
-  display: inline-block;
-  margin: 8px;
+.btn {
+  margin-top: 20px;
   padding: 14px 22px;
+  background: #c79a2b;
+  color: black;
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
 }
 
-.btn {
-  background: #c79a2b;
-  color: black;
-}
-
-.btn-outline {
-  border: 2px solid #ffffff;
-  color: white;
-}
-
-.top-strip {
-  background: #2b211b;
-  color: #e8d8bf;
-  text-align: center;
-  padding: 14px 20px;
-  font-size: 14px;
-  letter-spacing: 0.4px;
-}
-
+/* CONTENT */
 .container {
   max-width: 1050px;
   margin: auto;
@@ -74,91 +69,53 @@ body {
 
 .card {
   background: white;
-  padding: 30px;
+  padding: 28px;
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 h2 {
   margin-top: 0;
-  color: #1f1a17;
-  border-bottom: 2px solid #e8dfd3;
-  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
 }
 
-.grid-2 {
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 22px;
-}
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 
-.service-box {
-  background: #fff;
-  border: 1px solid #ece3d8;
-  border-radius: 10px;
-  padding: 24px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-}
-
-.service-box h3 {
-  margin-top: 0;
-  color: #2d241d;
-}
-
-ul {
-  padding-left: 20px;
-  line-height: 1.8;
-}
-
+/* CTA */
 .cta {
   background: #1f1814;
   color: white;
-  padding: 36px 24px;
   text-align: center;
-  margin-top: 14px;
+  padding: 35px;
   border-radius: 10px;
 }
 
-.cta p {
-  color: #e8ddd2;
-}
-
 .cta a {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 20px;
   background: #c79a2b;
+  padding: 12px 20px;
   color: black;
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
 }
 
-.contact-box p {
-  margin: 10px 0;
-}
-
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 24px;
-  font-size: 13px;
-  color: #6f665f;
+  padding: 20px;
+  font-size: 12px;
+  color: #777;
 }
 
-@media (max-width: 850px) {
-  .grid-2, .grid-3 {
+@media (max-width: 800px) {
+  .grid {
     grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 31px;
   }
 }
 </style>
@@ -166,20 +123,20 @@ footer {
 
 <body>
 
-<div class="hero">
-  <h1>The African Woman LLC</h1>
-  <p>Reliable Janitorial and Facilities Support for Government and Commercial Clients</p>
-  <p>SBA Certified WOSB | SAM.gov Registered | E-Verify Enrolled | Fully Insured</p>
-  <p>UEI: QQAAF53NB9S3 | CAGE: 18X04</p>
-
-  <div class="btn-row">
-    <a href="mailto:info@theafricanwomanllc.com?subject=Request%20for%20Quote" class="btn">Request a Quote</a>
-    <a href="mailto:info@theafricanwomanllc.com?subject=Request%20Capability%20Statement" class="btn-outline">Request Capability Statement</a>
+<div class="nav">
+  <h3>The African Woman LLC</h3>
+  <div>
+    <a href="#services">Services</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
   </div>
 </div>
 
-<div class="top-strip">
-  Woman-Owned Small Business • Compliance Ready • Responsive Service • Atlanta, Georgia
+<div class="hero">
+  <h1>Reliable Janitorial & Facilities Support</h1>
+  <p>SBA Certified WOSB | SAM Registered | Fully Insured</p>
+  <p>Atlanta, Georgia</p>
+  <a href="mailto:info@theafricanwomanllc.com" class="btn">Request a Quote</a>
 </div>
 
 <div class="container">
@@ -187,61 +144,60 @@ footer {
   <div class="card">
     <h2>About Us</h2>
     <p>
-      The African Woman LLC provides reliable and scalable janitorial and facilities support services for government and commercial clients.
-      We are committed to quality, consistency, professionalism, and responsive service delivery.
+      The African Woman LLC delivers consistent, high-quality janitorial and facility support
+      services for government and commercial clients with a strong focus on professionalism,
+      responsiveness, and reliability.
     </p>
   </div>
 
-  <div class="card">
-    <h2>Core Services</h2>
-    <div class="grid-3">
-      <div class="service-box">
-        <h3>Janitorial Services</h3>
-        <p>Routine cleaning support for offices, facilities, and institutional environments.</p>
-      </div>
-      <div class="service-box">
-        <h3>Restroom Sanitation</h3>
-        <p>Consistent restroom cleaning, sanitation, and supply upkeep.</p>
-      </div>
-      <div class="service-box">
-        <h3>Facilities Support</h3>
-        <p>Dependable support services to keep buildings clean, presentable, and operational.</p>
-      </div>
-    </div>
+  <div class="card" id="services">
+    <h2>Services</h2>
+    <ul>
+      <li>Janitorial & Custodial Services</li>
+      <li>Office Cleaning</li>
+      <li>Restroom Sanitation</li>
+      <li>Trash Removal</li>
+      <li>Facilities Support</li>
+    </ul>
   </div>
 
-  <div class="grid-2">
+  <div class="card" id="experience">
+    <h2>Experience</h2>
+    <p>
+      Our team has experience supporting commercial facilities and is equipped to scale
+      operations for government contracts, ensuring compliance, consistency, and quality delivery.
+    </p>
+  </div>
+
+  <div class="grid">
     <div class="card">
       <h2>Why Choose Us</h2>
       <ul>
         <li>Direct owner oversight</li>
-        <li>Fast response and communication</li>
-        <li>Scalable support for small and large contracts</li>
-        <li>Fully insured and compliance ready</li>
-        <li>Professional and dependable service</li>
+        <li>Fast response</li>
+        <li>Scalable team</li>
+        <li>Fully insured</li>
       </ul>
     </div>
 
-    <div class="card contact-box">
-      <h2>Business Information</h2>
-      <p><strong>Email:</strong> info@theafricanwomanllc.com</p>
-      <p><strong>Phone:</strong> (561) 690-8239</p>
-      <p><strong>Location:</strong> Atlanta, Georgia</p>
-      <p><strong>UEI:</strong> QQAAF53NB9S3</p>
-      <p><strong>CAGE:</strong> 18X04</p>
+    <div class="card" id="contact">
+      <h2>Contact</h2>
+      <p>Email: info@theafricanwomanllc.com</p>
+      <p>Phone: (561) 690-8239</p>
+      <p>Atlanta, Georgia</p>
     </div>
   </div>
 
   <div class="cta">
-    <h2>Need Reliable Support?</h2>
-    <p>Contact us today for dependable janitorial and facilities support services.</p>
+    <h2>Ready to Work With Us?</h2>
+    <p>Contact us today for reliable service.</p>
     <a href="mailto:info@theafricanwomanllc.com">Email Us</a>
   </div>
 
 </div>
 
 <footer>
-  © 2026 The African Woman LLC. All rights reserved.
+© 2026 The African Woman LLC
 </footer>
 
 </body>
