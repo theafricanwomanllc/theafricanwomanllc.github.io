@@ -22,78 +22,107 @@
   </header>
 
   <section class="page-hero">
-    <div class="container">
+    <div class="container fade-up">
       <div class="eyebrow">Services</div>
       <h1>Professional Cleaning and Facilities Support</h1>
-      <p>
+      <p class="lead">
         We provide reliable janitorial and facilities support services designed to help
         government and commercial clients maintain clean, safe, and well-managed environments.
       </p>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="grid-3">
-        <div class="card">
-          <h3>Janitorial Services</h3>
-          <p>
-            Routine cleaning support for offices, commercial buildings, and institutional spaces.
-          </p>
+  <section class="section fade-up">
+    <div class="container editorial-grid">
+      <div class="editorial-copy">
+        <div class="eyebrow">Service Overview</div>
+        <h2>Built to Support Clean, Functional Daily Operations</h2>
+        <p>
+          Our services are designed for organizations that need dependable support,
+          consistent quality, and professional execution across routine and facility-based needs.
+        </p>
+        <p>
+          We focus on maintaining environments that are clean, presentable, and ready
+          for employees, visitors, and daily operations.
+        </p>
+      </div>
+
+      <div class="editorial-cards">
+        <div class="feature-card fade-up">
+          <div class="feature-number">01</div>
+          <h3>Consistent Quality</h3>
+          <p>Reliable service delivery with attention to detail and professionalism.</p>
         </div>
 
-        <div class="card">
-          <h3>Custodial Services</h3>
-          <p>
-            Consistent upkeep of interior spaces to support cleanliness, presentation, and daily function.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Restroom Sanitation</h3>
-          <p>
-            Detailed restroom cleaning, sanitizing, and restocking support.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Office Cleaning</h3>
-          <p>
-            Cleaning support for workstations, common areas, breakrooms, and shared spaces.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Trash Removal</h3>
-          <p>
-            Collection and removal of waste to support clean, organized environments.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Facilities Support</h3>
-          <p>
-            General support services that help facilities remain clean, presentable, and operational.
-          </p>
+        <div class="feature-card fade-up">
+          <div class="feature-number">02</div>
+          <h3>Responsive Support</h3>
+          <p>Clear communication and dependable follow-through across service needs.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section section-dark">
+  <section class="section section-dark premium-services fade-up">
+    <div class="container">
+      <div class="eyebrow">Core Services</div>
+      <h2>Designed for Clean, Safe, Functional Spaces</h2>
+
+      <div class="service-grid-modern">
+        <div class="service-tile fade-up">
+          <div class="service-icon">✦</div>
+          <h3>Janitorial Services</h3>
+          <p>Routine cleaning support for offices, commercial buildings, and institutional spaces.</p>
+        </div>
+
+        <div class="service-tile fade-up">
+          <div class="service-icon">✦</div>
+          <h3>Custodial Services</h3>
+          <p>Consistent upkeep of interior spaces to support cleanliness, presentation, and daily function.</p>
+        </div>
+
+        <div class="service-tile fade-up">
+          <div class="service-icon">✦</div>
+          <h3>Restroom Sanitation</h3>
+          <p>Detailed restroom cleaning, sanitizing, and restocking support.</p>
+        </div>
+
+        <div class="service-tile fade-up">
+          <div class="service-icon">✦</div>
+          <h3>Office Cleaning</h3>
+          <p>Cleaning support for workstations, common areas, breakrooms, and shared spaces.</p>
+        </div>
+
+        <div class="service-tile fade-up">
+          <div class="service-icon">✦</div>
+          <h3>Trash Removal</h3>
+          <p>Collection and removal of waste to support clean, organized environments.</p>
+        </div>
+
+        <div class="service-tile fade-up">
+          <div class="service-icon">✦</div>
+          <h3>Facilities Support</h3>
+          <p>General support services that help facilities remain clean, presentable, and operational.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-up">
     <div class="container grid-2">
-      <div>
+      <div class="card highlight-card fade-up">
         <div class="eyebrow">Service Approach</div>
         <h2>Built for Quality and Consistency</h2>
         <p>
           Our service model is centered on responsiveness, professionalism, and reliable execution.
-          We understand the importance of maintaining clean, functional environments and supporting
-          clients with service they can trust.
+          We understand the importance of maintaining clean, functional environments and
+          supporting clients with service they can trust.
         </p>
       </div>
 
-      <div class="card dark-card">
-        <h3>What Clients Can Expect</h3>
+      <div class="card business-card fade-up">
+        <div class="eyebrow">What Clients Can Expect</div>
+        <h2>Dependable Delivery</h2>
         <ul class="list-clean">
           <li>Reliable, scheduled service delivery</li>
           <li>Professional communication and responsiveness</li>
@@ -105,9 +134,9 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section fade-up">
     <div class="container">
-      <div class="cta-band">
+      <div class="cta-band dramatic-cta">
         <div class="eyebrow">Need Service?</div>
         <h2>Request Support for Your Facility</h2>
         <p>
@@ -126,6 +155,20 @@
       © 2026 The African Woman LLC. All rights reserved.
     </div>
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
 
 </body>
 </html>
