@@ -241,6 +241,28 @@ a {
   color: white;
 }
 
+/* FIX INVISIBLE TEXT IN WHITE CARDS */
+.section-dark .card {
+  background: #ffffff;
+  color: #221d1a;
+}
+
+.section-dark .card p,
+.section-dark .card strong,
+.section-dark .card li {
+  color: #221d1a;
+}
+
+.section-dark .card .eyebrow {
+  color: #c8a96a;
+}
+
+.card {
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
 .section-dark p {
   color: rgba(255,255,255,0.8);
 }
