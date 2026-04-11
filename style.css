@@ -996,3 +996,14 @@ body {
 .section-dark .business-card {
   background: #ffffff;
 }
+
+.section-dark .business-card,
+.section-dark .business-card p,
+.section-dark .business-card strong,
+.section-dark .business-card .eyebrow {
+  color: #221d1a;
+}
+
+.section-dark .business-card {
+  background: #ffffff;
+}
