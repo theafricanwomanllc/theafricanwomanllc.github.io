@@ -982,3 +982,17 @@ body {
 .btn:hover::after {
   left: 100%;
 }
+
+.section-dark .business-card,
+.section-dark .business-card h2,
+.section-dark .business-card h3,
+.section-dark .business-card p,
+.section-dark .business-card li,
+.section-dark .business-card .eyebrow,
+.section-dark .business-card strong {
+  color: #221d1a;
+}
+
+.section-dark .business-card {
+  background: #ffffff;
+}
