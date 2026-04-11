@@ -1029,3 +1029,108 @@ body {
 .section-dark .business-card {
   background: #ffffff;
 }
+
+/* =========================
+   ANIMATION (FADE-UP)
+========================= */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation (premium feel) */
+.fade-up:nth-child(1) { transition-delay: 0.1s; }
+.fade-up:nth-child(2) { transition-delay: 0.2s; }
+.fade-up:nth-child(3) { transition-delay: 0.3s; }
+
+
+/* =========================
+   CARD HOVER EFFECTS
+========================= */
+.card,
+.feature-card {
+  transition: all 0.3s ease;
+}
+
+.card:hover,
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   BUTTON HOVER EFFECTS
+========================= */
+.btn {
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+
+/* =========================
+   DARK SECTION UPGRADE
+========================= */
+.section-dark {
+  background: linear-gradient(135deg, #1a1410, #2b211a);
+}
+
+
+/* =========================
+   FIX WHITE CARD TEXT ON DARK
+========================= */
+.section-dark .card,
+.section-dark .business-card {
+  background: #ffffff;
+  color: #221d1a;
+}
+
+.section-dark .card p,
+.section-dark .card li,
+.section-dark .card strong {
+  color: #221d1a;
+}
+
+.section-dark .card .eyebrow {
+  color: #c8a96a;
+}
+
+
+/* =========================
+   GENERAL CARD POLISH
+========================= */
+.card,
+.feature-card {
+  padding: 28px;
+  border-radius: 14px;
+}
+
+
+/* =========================
+   SECTION SPACING
+========================= */
+.section {
+  padding: 80px 0;
+}
+
+
+/* =========================
+   CLEAN LIST STYLE
+========================= */
+.list-clean {
+  padding-left: 18px;
+}
+
+.list-clean li {
+  margin-bottom: 8px;
+}
